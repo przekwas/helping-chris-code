@@ -27,6 +27,7 @@ That's it.  You're done.  You have all the beginning tools to start practicing c
 
 ### Command Line 
 [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/).  If you don't have any experience in a unix bash terminal, this will give you a list of possible stuff you can do.  I want you to be familiar with:
+
 | command | purpose |
 |--|--|
 | `cd` | to navigate directories on your harddrive |
