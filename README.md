@@ -1,105 +1,58 @@
-# Helping Chris
+# HTML Lab, Basic HTML Elements and Document Structure
 
-### Things to download
-1. [VS Code](https://code.visualstudio.com/) will be your editor of choice.  It is supported by Microsoft and has widespread developer support, and can be customized with cool extensions that I can show you later.  Compatible on Mac and Windows.  Autofill syntax, good error handling, and dark themed.  :)
+### Objective
+This is will be fairly simple looking, not scale to mobile, have no additional style, and not build anything useful.  It's just stretching your HTML muscles and ability to hit me up for help, or search Google for what you need!  I definitely recommend using the crap out of [W3 Schools](https://www.w3schools.com/html/default.asp) when you're starting out 'cause they have simple examples, list a lot of what you can do, and don't use a lot of technical jargon.  
 
-2. (Windows Only) [Cmder](http://cmder.net/) will be replacing Command Prompt and Powershell outside of very niche scenarios.  It emulates a Unix bash style terminal that will give you all the commands you need to become a l337 coder.  If you're coding on Mac, the default terminal works just fine.
-	* It does not have an installer exe, instead unzip it to a directory called "Cmder" on your harddrive.  And you're going to want it on the root or close to it if possible.  My PC at home is literally `C:/Cmder` as it'll make it easy to navigate around in your terminal from there instead of a path like `C:/Users/ChrisSmith/My Documents/NOT_PORN/furry/futanari/yiffing/boofing/Cmder`
-	* Open a Command Prompt as an Administrator
-	    -   Hit the Win key and type "CMD"
-	    -   Right-click on "Command Prompt" and click "Run as Administrator"
-	* Navigate to the directory you have placed Cmder
-	    -   Use  `cd <directory>`  to get to the folder
-	    -   For example: if you have the  `Cmder.exe`  in  `C:\Cmder`  you would type  `cd C:\Cmder`  and press  `Enter`
-	* Execute this command:  `.\Cmder.exe /REGISTER ALL`
-	    -   _If you get a message "Access Denied" ensure you are executing the command in an  **Administrator**  prompt._
-	 * In a file explorer window right click in or on a directory to see "Cmder Here" in the context menu. From this point forward you can do this any time you need to open a command prompt.
-	 
-3. Download [git command line tools](https://git-scm.com/downloads).  You don't care about any of the frill on the install, just need the command line tools, no gui, no other bullshit.  Text me if there's anything you're not sure about.
-	* Type `git --version` into your Cmder after installation (note you might need to close / reopen Cmder) and make sure you get a version response 
-	* `git !== github` they are two separate things.  Github is an online "cloud" of sorts that will backup your code.  `git` is a command line tool to help link your local directory of code, to Github.  It allows you to pull new code, clone my repositories, make changes locally, and push to them up to the cloud
-	* [Register for a Github account](https://github.com/) if you haven't already at this point.  It's free.  Remember your email, username, and password as you'll need to enter those into `git` tools the first time you push code, after which it'll remember your settings
-	
 ---
-That's it.  You're done.  You have all the beginning tools to start practicing coding.
+### Requirements
 
---- 
+ - Attempt to use your terminal as much as possible to navigate and create stuff on your hard drive!
+ - Create a new directory in your `source` directory we made last time, it won't be nested in the first lab I made you do, but rather a sibling. So something like:
+```bash
+C:/source/
+	-- my-first-project/
+	-- html-lab/
+```
+Every time you start a new project or lab I give you, it'll need its own directory, its own `.git` via `git init`, and its own online GitHub repo.
+ - Create an `index.html` inside your `html-lab` directory.
+ - Use your emmet abbreviation to (*hint* it was the `!` trick you used in the last lab) create your basic HTML structure.
+ - Like I mentioned just above, create a new GitHub repo for this lab and call it `html-lab`.
+ - Use the TL;DR workflow from the last lab to push your basic `index.html` up to your new GitHub repo.
+ - Try to add, commit, and push every ~5 or steps to get used to the flow of pushing a few lines of completed code regularly.  You'll thank me in the future when you have a great working history of your code in your commit history.
 
-### Command Line 
-[Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/).  If you don't have any experience in a unix bash terminal, this will give you a list of possible stuff you can do.  I want you to be familiar with:
+---
+### Lab
 
-| command | purpose |
-|--|--|
-| `cd` | to navigate directories on your harddrive |
-| `ls` | to list files in the directory you're in |
-| `mkdir` | to create a new directory with a name in the directory you're in |
-| `pwd` | to print your current working directory path |
-| `touch` | to create files with extension names from terminal |
+ 1. Change the text of your `<title>` element in your document to `HTML Drills`, this will be what the tab displays in your Chrome browser.
+ 2. Inside the `<body>` of your page, insert `<h1>` through `<h6>` elements, give each heading element some funny text.  These will represent "sections" of the lab.
+ 3. Add a [comment](https://www.w3schools.com/html/html_comments.asp) before each heading to give yourself a reminder what the purpose of that section should be.
+ 4. Add a `<p>` element after each heading.  Inside of each `<p>`, write some kind of dank meme.
+ 5. Add an image after each paragraph on your page.
+ 6. Wrap each "section" (header, paragraph, image) with a `<section>` element ([hint](https://www.w3schools.com/tags/tag_section.asp)).  You'll need to fix your indenting after wrapping each section.  Struggle like a [goddamn bitch](https://youtu.be/iDNg4UdwmNw) trying to manually adjust it. 
+	 - Realize this won't work in large scale projects with dozens of nested elements you wrap and learn the hotkey to `Format Document`.  Right click in your VS Code anywhere and you'll see it in the drop down.  Learn it.  Abuse it.  It's prolly my most used hotkey.
+8.  Add an *unordered* list with at least **3** [list items](https://www.w3schools.com/tags/tag_li.asp) in between every paragraph and image.  More dank memes will be each item's text content.
+9. Create a form with 3 inputs for first name, last name, and email address. Make sure each input is labeled, and that all of them (not each individually) are wrapped with a form tag.
+10. Add a button to the form using an `<input>` tag.  Don't use the `<button>` tag.
+	- **Hint**: Whatever asshole decided that an [`<input>`](https://www.w3schools.com/tags/tag_input.asp) tag can also be a button can literally die in a fire.
+11. Add an *ordered* list below your final section.  Give the list **5** items that are your Smash Bros. Ultimate tier list opinion.
+12. Wrap the entire page in a `<div>`.  Note that you can't add UI Elements anywhere other than the `<body>` of your HTML.  If I see a commit or your repo with a div anywhere other than your HTML body, I'll [kill you](https://www.youtube.com/watch?v=NpOj2BwimrM).
+	- I hope you remember your format document hotkey, asshole.  Watch the magic happen.  
+13. Add a horizontal line in between each section in your document.
+14. Add [hyperlinks](https://www.w3schools.com/tags/tag_a.asp) around each image that opens the image in a new tab.
+15. Add a table at the top of your page with the following columns (headers): Month, Day, Year.
+16. Add a row for each day you wish you were dead.  I know this would technically be a lot so try and do like **4** rows.
+17. Add a hyperlink under the table that links to a good YouTube video.  Just like I've been doing all over this bitch.
+18. Add a horizontal line at the bottom of your page.
+19. Add a div below that line.
+20. Add a `<h1>` inside that div and give it some text content like the title of [your favorite movie](https://www.youtube.com/watch?v=Y5Peo3Nt4eM). 
+21. Add an image inside that div and below the header that is the poster of your favorite movie.
+22. Add a `<p>` below the movie poster that's a brief description of the cinematic masterpiece that is Kung Pow.
+23. Add an unordered list with the cast of the movie.
+24. Add another unordered list witht he box office stats, movie budget, and release date.
+25. *Embed* a trailer of the movie using YouTube below the lists.  
 
-## First Exercise
-**Achieve the following in Cmder**:
-1. Navigate to the your root directory `C:/`
-2. Make a new directory called `source`
-3. Inside `source`, create a new directory called `my-first-project`
-4. Inside `my-first-project`, create a new file called `index.html` (the resulting path should be `C:/source/my-first-project/index.html`)
-5. Use `code .` to open this directory in VS Code automatically
+---
 
-**Next Steps in VS Code**:
+### Boom
 
-6. Using [emmet abbreviation](https://code.visualstudio.com/docs/editor/emmet) create a dope boilerplate for your HTML page  
-	* *Hint*: You can literally type `!` at the top of your blank HTML page and hit `enter` and it will auto fill your basic head and body structure of an HTML page.
-7. Add an `<h1>` that displays "Hello World!" in the body of your HTML code
-8. Save the file
-
-**Next Steps in Chrome**:
-
-9.   While logged in on Github, go to your profile page and click on the repositories tab, and click the green `New` repository button.
-9. Give it a repository name using lowercase and hyphens.  Kind of like your directory name, and note that it *does not* have to match your directory name, but it's typically good practice to do so
-	* Description doesn't matter, Public, and we don't care about initializing with a readme 
-10.  Copy the `https://github.com/przekwas/helping-chris-code.git` link from the `Quick Setup` field you'll see at the top.  Yours will obviously have your gituhb username and the repo name
-
-**Next Steps in Cmder**: 
-
-12. `pwd` to ensure you're in your `C:/source/my-first-project` directory
-13. `ls` to ensure you have your `index.html` in this directory
-14. Run `git init`, this will create a hidden git folder that will serve as the link between your local directory and its online repo.  It also tracks any changes you make that aren't in your online code
-15. Run `git status` and it should show you in red text that `index.html` is an untracked file
-16. Run `git add .` the single `.` represents *this* directory, so this command tells git to add **all** files and changes in this directory, you'll be using this 99% of the time at your level
-17. Run `git commit -m "first commit"` this will add a message with your newly added/tracked files.  The `-m` is a required message flag, and for the love of god the message must be wrapped with `" "` otherwise you'll open VIM and fuck it all up.  Text me if you do, lol
-	* commits are typically lowercase, using present progressive verbs, and short, ie "adding changes to my footer", "updating html file structure", etc 
-18. Run `git remote add origin https://github.com/przekwas/helping-chris-code.git` where you paste **your** link you coped earlier instead of mine.  This connects your local git folder to the online repo you've created
-19. Run `git push -u origin master` and this will push your added and committed code to your Github repo!  The `-u` is a flag that sets the upstream to a `master` branch which you'll be working out of.  Go refresh your Chrome page and you'll see your `index.html` has been successfully pushed to Github!!!!  Congrats!
-
-## Second Exercise
-**Back in VS Code**:
-1. Wrap your `<h1>` with a `<div>` and give the wrapping div a class name of `boofing`
-2. Save the file
-
-**Next Steps in Cmder**:
-
-3. Run `git status` and notice it detected changes in your `index.html` file
-4. Run `git add .` to add all pending changes in this directory
-5. Run `git commit -m "adding a wrapping div"` to commit this change with what we did
-6. Run `git push` and you're all set!  It pushed our new code to your Github repo.  Refresh your Chrome page again and you'll see the new `index.html` with our new code in there
-
-# Congrats!
-You've achieved the first baby steps into a brand new world of development and you should be pretty fucking proud.  Text me your github repo link to show off your progress and I'll send you the next lab.  :) 
-
-The first exercise taught you how to initialize a new project locally and and to connect it to an online repo, and do your first push to it.  The second shows you the method to push changes after the first push.  Since it's connected you won't need to add a remote or set an upstream.  
-
-Below is the TL;DR for project set up and then pushing subsequent changes:
-
-1. Any new lab or exercise I give you will be its own directory
-2. `git init` in the new lab directory
-3. `git add .`
-4. `git commit -m "your message"`
-5. `git remote add origin https://your-github-repo-link/`
-6. `git push -u origin master`
-7. After this initial setup, any changes you make in this directory will be added via
-8. `git add .`
-9. `git commit -m "your message"`
-10. `git push`
-
-1-6 for fresh projects, 8-10 for existing projects.  
-
- 
+Let me know when you get this done by sending me a repo link!  Then we'll move on to *not* making websites that look like ass and learn some CSS to make it look cooler.
